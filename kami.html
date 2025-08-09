@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For My Chinese Queen 👑</title>
+  <style>
+    /* Background with lovely love colors */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Container for the letter */
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+      max-width: 480px;
+      transform: scale(0);
+      transition: transform 1s ease-in-out;
+      z-index: 10;
+    }
+
+    /* Show class to scale up the container */
+    .container.show {
+      transform: scale(1);
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #ff4d6d;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+      margin: 8px 0;
+      line-height: 1.4;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-style: italic;
+      color: #777;
+    }
+
+    /* Button styling */
+    #readBtn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 15px 35px;
+      font-size: 18px;
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(255, 77, 109, 0.6);
+      transition: background-color 0.3s ease, opacity 0.5s ease;
+      z-index: 20;
+    }
+
+    #readBtn:hover {
+      background-color: #e60039;
+    }
+
+    /* Hide button smoothly */
+    #readBtn.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="loveBox">
+    <h1>你好，我的女孩 💖</h1>
+    <p>你笑的样子，是我每天的阳光。</p>
+    <p>Your smile is the sunshine of my day.</p>
+
+    <p>我喜欢你，不是因为你美丽，而是因为你特别。</p>
+    <p>I like you, not because you're beautiful, but because you're unique.</p>
+
+    <p>遇见你，是我最幸运的事。</p>
+    <p>Meeting you was the luckiest thing in my life.</p>
+
+    <p>愿每天的晚安都属于你。</p>
+    <p>I hope every "Good night" belongs to you.</p>
+
+    <div class="footer">
+      — From a Bangladeshi boy who’s learning Chinese for you. 🇧🇩❤️🇨🇳
+    </div>
+  </div>
+
+  <button id="readBtn">Click to Read My Heart 💌</button>
+
+  <script>
+    const btn = document.getElementById('readBtn');
+    const loveBox = document.getElementById('loveBox');
+
+    btn.addEventListener('click', () => {
+      // Show the love message container
+      loveBox.classList.add('show');
+      // Hide the button smoothly
+      btn.classList.add('hide');
+    });
+  </script>
+
+</body>
+</html>
